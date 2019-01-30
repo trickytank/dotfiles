@@ -1,0 +1,10 @@
+[user]
+	name = Rick Tankard
+	email = tankard@wehi.edu.au
+[core]
+	excludesfile = /Users/tankard/.gitignore_global
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
