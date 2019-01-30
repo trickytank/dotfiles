@@ -1,0 +1,24 @@
+. ~/.bashrc
+
+export SVN_EDITOR=vim
+
+export PATH=/home/rtankard/software/installs/bin:$PATH
+export PATH=/home/rtankard/software/bin:$PATH
+
+# editors
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
+# software install paths
+export LD_LIBRARY_PATH=/home/rtankard/software/installs/lib:$LD_LIBRARY_PATH
+export CPATH=/home/rtankard/software/installs/include:$CPATH
+export MANPATH=/home/rtankard/software/installs/share/man:$MANPATH
+export INFOPATH=/home/rtankard/software/installs/share/info:$INFOPATH
+
+# Jar paths
+export PICARD=/home/rtankard/software/jar/picard.jar
+
+
+# Give load
+uptime
+
