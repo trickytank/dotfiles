@@ -1,0 +1,73 @@
+. ~/.bashrc
+ 
+# echo "Bash profile running" 1>&2
+
+##
+# Your previous /Users/tankard/.bash_profile file was backed up as /Users/tankard/.bash_profile.macports-saved_2012-04-20_at_13:57:15
+##
+
+# MacPorts Installer addition on 2012-04-20_at_13:57:15: adding an appropriate PATH variable for use with MacPorts.
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+# Finished adapting your PATH environment variable for use with MacPorts.
+
+# export PYTHONPATH=/Users/tankard/Library/python:$PYTHONPATH
+
+# Perlbrew
+source ~/perl5/perlbrew/etc/bashrc
+
+export bahlolab_db=/Volumes/tankard/bahlolab_db
+
+# Seminar update function
+function seminar {
+    cd ~/Documents/Bioinfseminars/
+    . update_seminar.sh
+}
+
+export SVN=unix303/home/users/lab0605/Bioinformatics/SNPchipdata/svn/repos
+export SVNrepo=svn+ssh://$SVN
+
+# file paths
+export PATH=/Users/tankard/Applications/bin:$PATH
+export PATH=/Users/tankard/Documents/svn/tankardtools:$PATH
+
+# Perl paths
+#export PERL5LIB=/Users/tankard/Library/perl5/lib:/Users/tankard/Library/perl5/lib/lib/perl5:$PERL5LIB
+#export PERL5LIB=/Users/tankard/Library/perl5/lib/lib/perl5/site_perl/:$PERL5LIB
+#export PERL5LIB=/Users/tankard/Library/perl5/lib/perl5/site_perl/:$PERL5LIB
+export PERL5LIB=/Users/tankard/Documents/svn/tankardtools:$PERL5LIB
+if [[ ! $PERL5LIB =~ /Users/tankard/Documents/svn/tankardtools/perl/lib ]] ; then 
+    export PERL5LIB=/Users/tankard/Documents/svn/tankardtools/perl/lib:$PERL5LIB
+fi
+
+export SVN_EDITOR=vim
+
+# New git
+export PATH=/usr/local/git/bin:$PATH
+
+# added by Anaconda 1.9.1 installer
+export PATH="/Users/tankard/anaconda/bin:$PATH"
+
+# To brew stuff
+export HOMEBREW_PREFIX=/Users/tankard/Applications/usr/local
+export PATH=/Users/tankard/Applications/usr/local/bin:$PATH
+
+# added by Anaconda3 4.3.1 installer
+export PATH="/Users/tankard/Applications/anaconda3/bin:$PATH"
+
+# 
+export hpc=torquelord2.hpc.wehi.edu.au
+export milton=$hpc
+
+# For VCFtools
+export PATH=/Users/tankard/Applications/vcftools-0.1.15/bin/bin:$PATH
+export PERL5LIB=/Users/tankard/Applications/vcftools-0.1.15/bin/lib/site_perl/5.20.2:$PERL5LIB
+
+# For Ruby rbenv
+eval "$(rbenv init -)"
+
+# For context
+export PATH=/Users/tankard/Applications/context/tex/texmf-osx-64/bin:$PATH
+
+# For awesome bash completion
+[ -f /Users/tankard/Applications/usr/local/etc/bash_completion ] && . /Users/tankard/Applications/usr/local/etc/bash_completion
+

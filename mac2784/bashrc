@@ -1,0 +1,39 @@
+# echo "Bash RC running" 1>&2
+
+if [[ ! $PERL5LIB =~ /Users/tankard/Documents/svn/tankardtools/perl/lib ]] ; then 
+    export PERL5LIB=/Users/tankard/Documents/svn/tankardtools/perl/lib:$PERL5LIB
+fi
+
+alias rm='rm -i'
+alias ll='ls -lh'
+alias up='cd ..'
+alias size='du -h -d 1'
+
+# From the server
+alias f='finger -h -p'
+alias h='history 23'
+alias lln='ls -lLh'
+alias lo='logout'
+alias mailx='/usr/ucb/mail'
+alias null='cp /dev/null'
+alias xps='xps -c A4'
+alias xt='xterm -132 -fn 9x15 -fb 9x15b -j -rw +sf -sl 2000 -sb -title Spare -geometry 80x24+400+350 -tn xterm &'
+alias cdpk2='cd /export/share/prkfs2/shared/bioinf-data/'
+
+
+# For a funky prompt!
+PS1="\h:\w \T$ "
+PS1="\h:\w \T🐔  "
+
+# file paths
+export PATH=/Users/tankard/Applications/bin:$PATH
+
+
+# Add ssh agent
+agent () {
+    eval "$(ssh-agent -s)"
+    ssh-add -K ~/.ssh/id_rsa
+	ssh-add -K ~/.ssh/pawsey_rsa_key
+}
+
+
