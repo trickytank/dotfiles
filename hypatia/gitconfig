@@ -1,0 +1,7 @@
+[user]
+	email = rtankard@hypatia.murdoch.edu.au
+	name = Rick Tankard (Hypatia)
+[core]
+	editor = vim
+[push]
+	default = simple
