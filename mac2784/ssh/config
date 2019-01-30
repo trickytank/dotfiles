@@ -1,0 +1,51 @@
+Host *
+ AddKeysToAgent yes
+ UseKeychain yes
+ IdentityFile ~/.ssh/pawsey_rsa_key
+
+Host *
+ AddKeysToAgent yes
+ UseKeychain yes
+ IdentityFile ~/.ssh/id_rsa
+
+Host hypatia.murdoch.edu.au
+ User rtankard
+ ForwardX11Trusted yes
+
+Host hypatia
+ HostName hypatia.murdoch.edu.au
+ User rtankard
+ RemoteForward 20202 localhost:22
+ ForwardX11Trusted yes
+
+Host zeus.pawsey.org.au
+ User rtankard
+ ForwardX11Trusted yes
+
+Host zeus
+ HostName zeus.pawsey.org.au
+ User rtankard
+ RemoteForward 20202 localhost:22
+ ForwardX11Trusted yes
+
+Host magnus
+ HostName magnus.pawsey.org.au
+ User rtankard
+ RemoteForward 20202 localhost:22
+ ForwardX11Trusted yes
+
+Host hpc-data.pawsey.org.au
+ User rtankard
+ ForwardX11Trusted yes
+
+Host hpc-data
+ HostName hpc-data.pawsey.org.au
+ User rtankard
+ RemoteForward 20202 localhost:22
+ ForwardX11Trusted yes
+
+Host mini
+ HostName trickytank.asuscomm.com
+ User tank
+ Port 47454
+ ForwardX11Trusted yes
