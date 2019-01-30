@@ -1,0 +1,5 @@
+
+" For MacVim, set the default font: 
+set guifont=Andale\ Mono:h14
+
+colorscheme default

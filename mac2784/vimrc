@@ -1,0 +1,47 @@
+" preference file for vim
+
+" show line numbers
+set number
+
+" Always  set auto indenting on
+set autoindent
+
+" select when using the mouse
+set selectmode=mouse
+
+" show the cursor position all the time
+set ruler
+
+" I like this as it makes reading texts easier (for me, at least).
+set joinspaces
+
+" Syntax highlighting on
+syntax enable
+
+colorscheme evening
+
+" To insert text without auto-indenting
+set pastetoggle=<F2>
+
+" Set tab length
+set tabstop=4
+
+" Set R language recognisation:
+au BufRead,BufNewFile *.R set filetype=R
+au BufRead,BufNewFile *.r set filetype=R
+
+au! Syntax newlang source ~/.vim/r.vim
+
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
+" Set a better escape key (option-period)
+imap ≥ <Esc>
+
+" Case insensitive searching by default
+set ignorecase
+
+" Highlighting search
+set hlsearch
+
