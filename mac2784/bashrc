@@ -25,9 +25,6 @@ alias cdpk2='cd /export/share/prkfs2/shared/bioinf-data/'
 PS1="\h:\w \T$ "
 PS1="\h:\w \T🐔  "
 
-# file paths
-export PATH=/Users/tankard/Applications/bin:$PATH
-
 
 # Add ssh agent
 agent () {
@@ -35,5 +32,3 @@ agent () {
     ssh-add -K ~/.ssh/id_rsa
 	ssh-add -K ~/.ssh/pawsey_rsa_key
 }
-
-
