@@ -1,0 +1,71 @@
+# Sample .bashrc for SuSE Linux
+# Copyright (c) SuSE GmbH Nuernberg
+
+# There are 3 different types of shells in bash: the login shell, normal shell
+# and interactive shell. Login shells read ~/.profile and interactive shells
+# read ~/.bashrc; in our setup, /etc/profile sources ~/.bashrc - thus all
+# settings made here will also take effect in a login shell.
+#
+# NOTE: It is recommended to make language settings in ~/.profile rather than
+# here, since multilingual X sessions would not work properly if LANG is over-
+# ridden in every subshell.
+
+# Some applications read the EDITOR variable to determine your favourite text
+# editor. So uncomment the line below and enter the editor of your choice :-)
+#export EDITOR=/usr/bin/vim
+#export EDITOR=/usr/bin/mcedit
+
+# For some news readers it makes sense to specify the NEWSSERVER variable here
+#export NEWSSERVER=your.news.server
+
+# If you want to use a Palm device with Linux, uncomment the two lines below.
+# For some (older) Palm Pilots, you might need to set a lower baud rate
+# e.g. 57600 or 38400; lowest is 9600 (very slow!)
+#
+#export PILOTPORT=/dev/pilot
+#export PILOTRATE=115200
+
+test -s ~/.alias && . ~/.alias || true
+
+alias cdg='cd /group/pawsey0306'
+alias cdgu='cd /group/pawsey0306/rtankard'
+
+alias rm='rm -i'
+alias ll='ls -lh'
+alias up='cd ..'
+alias size='du -h --max-depth=1'
+
+# Aliases for squeue
+alias q='squeue -u rtankard'
+
+# Add ssh agent
+agent () {
+    eval "$(ssh-agent -s)"
+    ssh-add ~/.ssh/id_rsa
+}
+
+
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi  
+fi
+
+# edit file locally with macvim
+# Requires an ssh tunnel is established, such as:
+# # ssh -R20202:localhost:22 zeus
+# edit file locally with macvim
+function mvim {
+    if [ "$SSH_AGENT_PID" != "" ] && ( ps -p $SSH_AGENT_PID > /dev/null )
+    then
+        path=$( realpath "$1" )
+        ssh -p 20202 tankard@localhost mvim "scp://hpc-data/$path" &
+    else
+        echo "ssh-agent is not running" 1>&2
+    fi
+}

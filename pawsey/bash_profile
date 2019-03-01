@@ -1,0 +1,29 @@
+export PATH=/group/pawsey0306/rtankard/software/bin:$PATH
+
+# Old SCRATCH AND GROUP
+export OLDSCRATCH=/scratch/director2094/rtankard
+export OLDGROUP=/group/director2094/rtankard
+
+
+export PICARD=/group/pawsey0306/rtankard/software/picard/2.18.14/picard.jar
+
+export R_LIBS_USER=/group/pawsey0306/rtankard/software/R/lib
+
+# Formatting of sacct
+export SACCT_FORMAT="jobid,jobname,partition,user,account%16,alloccpus,nnodes,elapsed,cputime,state,exitcode"
+
+# SAMTOOLS reference cache directory
+export REF_CACHE=$MYGROUP/data_common/cache/hts-lib/
+
+# Genpipes 
+export MUGQIC_PIPELINES_HOME=/group/pawsey0306/rtankard/software/genpipes/genpipes-3.1.3
+export MUGQIC_INSTALL_HOME=/group/pawsey0306/rtankard/data_common/MUGQIC
+export MUGQIC_INSTALL_HOME_DEV=/group/pawsey0306/rtankard/data_common/MUGQIC_dev
+
+module use $MUGQIC_INSTALL_HOME/modulefiles
+module use $MUGQIC_INSTALL_HOME_DEV/modulefiles
+
+# Singularity
+export SINGULARITY_CACHEDIR=$MYGROUP/data_common/cache/singularity
+export SINGULARITY_PULLFOLDER=$MYGROUP/data_common/singularity_pulls
+
