@@ -11,38 +11,45 @@ Host *
 Host hypatia.murdoch.edu.au
  User rtankard
  ForwardX11Trusted yes
+ ForwardAgent yes
 
 Host hypatia
  HostName hypatia.murdoch.edu.au
  User rtankard
  RemoteForward 20202 localhost:22
  ForwardX11Trusted yes
+ ForwardAgent yes
 
 Host zeus.pawsey.org.au
  User rtankard
  ForwardX11Trusted yes
+ ForwardAgent yes
 
 Host zeus
  HostName zeus.pawsey.org.au
  User rtankard
  RemoteForward 20202 localhost:22
  ForwardX11Trusted yes
+ ForwardAgent yes
 
 Host magnus
  HostName magnus.pawsey.org.au
  User rtankard
  RemoteForward 20202 localhost:22
  ForwardX11Trusted yes
+ ForwardAgent yes
 
 Host hpc-data.pawsey.org.au
  User rtankard
  ForwardX11Trusted yes
+ ForwardAgent yes
 
 Host hpc-data
  HostName hpc-data.pawsey.org.au
  User rtankard
  RemoteForward 20202 localhost:22
  ForwardX11Trusted yes
+ ForwardAgent yes
 
 Host mini
  HostName trickytank.asuscomm.com
