@@ -2,6 +2,7 @@ Host *
  AddKeysToAgent yes
  UseKeychain yes
  IdentityFile ~/.ssh/pawsey_rsa_key
+ ServerAliveInterval 264
 
 Host *
  AddKeysToAgent yes
