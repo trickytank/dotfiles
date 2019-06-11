@@ -22,3 +22,5 @@ export PICARD=/home/rtankard/software/jar/picard.jar
 # Give load
 uptime
 
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
