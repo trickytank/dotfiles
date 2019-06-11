@@ -44,3 +44,7 @@ set ignorecase
 
 " Highlighting search
 set hlsearch
+
+" Allow mouse use
+set mouse=a
+
