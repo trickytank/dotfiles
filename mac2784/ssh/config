@@ -18,6 +18,7 @@ Host hypatia
  HostName hypatia.murdoch.edu.au
  User rtankard
  RemoteForward 20202 localhost:22
+ LocalForward 8787 localhost:8787
  ForwardX11Trusted yes
  ForwardAgent yes
 
