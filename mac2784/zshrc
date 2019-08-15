@@ -2,7 +2,8 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Run common profile commands
-. ~/.shell_profile
+# NOW RUN IN .zshenv
+#. ~/.shell_profile
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/tankard/.oh-my-zsh"
