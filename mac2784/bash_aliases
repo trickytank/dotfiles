@@ -1,12 +1,12 @@
 alias rm='rm -i'
-alias ll='ls -lh'
+alias ll='ls -lhG'
 alias up='cd ..'
 alias size='du -h -d 1'
 
 # From the server
 alias f='finger -h -p'
 alias h='history 23'
-alias lln='ls -lLh'
+alias lln='ls -lLhG'
 alias lo='logout'
 alias mailx='/usr/ucb/mail'
 alias null='cp /dev/null'
