@@ -7,6 +7,12 @@ Host *
 Host *
  AddKeysToAgent yes
  UseKeychain yes
+ IdentityFile ~/.ssh/training_adelaide_key
+ ServerAliveInterval 264
+
+Host *
+ AddKeysToAgent yes
+ UseKeychain yes
  IdentityFile ~/.ssh/id_rsa
 
 Host hypatia.murdoch.edu.au
@@ -58,3 +64,11 @@ Host mini
  User tank
  Port 47454
  ForwardX11Trusted yes
+ ForwardAgent yes
+
+Host training_adelaide
+ Hostname training-biohub.uoa.cloud
+ User training007
+ ForwardAgent yes
+ ForwardX11Trusted yes
+ ForwardAgent yes
