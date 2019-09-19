@@ -26,4 +26,11 @@ module use $MUGQIC_INSTALL_HOME_DEV/modulefiles
 # Singularity
 export SINGULARITY_CACHEDIR=$MYGROUP/data_common/cache/singularity
 export SINGULARITY_PULLFOLDER=$MYGROUP/data_common/singularity_pulls
+export SINGULARITY_BINDPATH=/scratch:/scratch,/group:/group,$SINGULARITY_BINDPATH
+
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
+# Source bashrc:
+source ~/.bashrc
 
