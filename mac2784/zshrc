@@ -1,10 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Run common profile commands
-# NOW RUN IN .zshenv
-#. ~/.shell_profile
-
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/rtankard/.oh-my-zsh"
 
