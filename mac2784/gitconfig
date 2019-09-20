@@ -1,10 +1,13 @@
 [user]
 	name = Rick Tankard
-	email = tankard@wehi.edu.au
+	email = rick.tankard@murdoch.edu.au
 [core]
 	excludesfile = /Users/tankard/.gitignore_global
+	editor = vim
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
