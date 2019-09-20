@@ -2,7 +2,7 @@
 	name = Rick Tankard
 	email = rick.tankard@murdoch.edu.au
 [core]
-	excludesfile = /Users/tankard/.gitignore_global
+	excludesfile = /Users/rtankard/.gitignore_global
 	editor = vim
 [filter "lfs"]
 	clean = git-lfs clean -- %f
