@@ -5,7 +5,7 @@
 ##
 
 # Run common profile
-. ~/.shell_profile
+# . ~/.shell_profile # Already performed in bashrc
 
 # Run .bashrc things
 . ~/.bashrc

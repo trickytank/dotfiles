@@ -5,12 +5,15 @@
 . ~/.bash_aliases
 
 # For a funky prompt!
-. ~/Documents/github/trickytank/dotfiles/mac2784/setup_files/git_PS1.sh
+if [ -f ~/Documents/git/github/trickytank/dotfiles/mac2784/setup_files/git_PS1.sh ]; then
+. ~/Documents/git/github/trickytank/dotfiles/mac2784/setup_files/git_PS1.sh
+fi
 
 if [ "$STY" == "" ]; then
     PS1="[\[\033[01;32m\]\u@\h\[\033[00m\]:" # User and host
     PS1+="\[\033[01;34m\]\w\[\033[00m\]]" # Working director
     PS1+="\[\$(git_color)\]\$(git_branch)\[$COLOR_RESET\] " # Git status
+    #PS1+=" (nogit) "
     PS1+="\[\033[04;33m\]\D{%F %T}\[\033[00m\]\n" # Date and time
     PS1+="\[\033[01;31m\]🐔\[\033[00m\] " # Prompt
     export PS1
