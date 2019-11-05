@@ -105,6 +105,9 @@ agent () {
     ssh-add ~/.ssh/id_rsa
 }
 
+# PATH for pip/pipenv
+export PATH=/home/rtankard/.local/bin:$PATH
+
 
 # added by Anaconda3 2018.12 installer
 # >>> conda init >>>
@@ -124,7 +127,7 @@ unset __conda_setup
 # <<< conda init <<<
 
 # Activate default conda env
-conda activate py3.7.2
+#conda activate py3.7.2
 
 
 
@@ -183,6 +186,8 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# Integrate Snakemake autocompletion
+complete -o bashdefault -C snakemake-bash-completion snakemake
 
 # Do this iterm thing twice
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
