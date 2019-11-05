@@ -18,6 +18,9 @@ export INFOPATH=/home/rtankard/software/installs/share/info:$INFOPATH
 # Jar paths
 export PICARD=/home/rtankard/software/jar/picard.jar
 
+# PATH to HISAT2
+export PATH=/home/rtankard/software/hisat2-2.1.0:$PATH
+
 
 # Give load
 uptime
