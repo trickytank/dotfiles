@@ -1,6 +1,6 @@
 [user]
 	name = Rick Tankard
-	email = rick.tankard@murdoch.edu.au
+	email = trickytank@users.noreply.github.com
 [core]
 	excludesfile = ~/.gitignore_global
 	editor = vim
