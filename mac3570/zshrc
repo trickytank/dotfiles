@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/rtankard/.oh-my-zsh"
+export ZSH="/Users/tankard.r/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -76,8 +76,8 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(
     git 
     web-search
-    zsh-syntax-highlighting
     zsh-autosuggestions
+    zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -140,3 +140,4 @@ if [ -f '/Users/tankard/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/tankard
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/tankard/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/tankard/google-cloud-sdk/completion.zsh.inc'; fi
+
