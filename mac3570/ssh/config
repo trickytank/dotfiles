@@ -1,61 +1,35 @@
 Host *
- AddKeysToAgent yes
- UseKeychain yes
- IdentityFile ~/.ssh/pawsey_rsa_key
- ServerAliveInterval 264
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_ed25519
 
-Host *
- AddKeysToAgent yes
- UseKeychain yes
- IdentityFile ~/.ssh/training_adelaide_key
- ServerAliveInterval 264
 
-Host *
- AddKeysToAgent yes
- UseKeychain yes
- IdentityFile ~/.ssh/id_rsa
-
-Host hypatia.murdoch.edu.au
- User rtankard
+Host slurm-login01
+ User tankard.r
  ForwardX11Trusted yes
  ForwardAgent yes
 
-Host hypatia
- HostName hypatia.murdoch.edu.au
- User rtankard
+Host slurm1
+ HostName slurm-login01
+ User tankard.r
  RemoteForward 20202 localhost:22
  LocalForward 8787 localhost:8787
  ForwardX11Trusted yes
  ForwardAgent yes
 
-Host zeus.pawsey.org.au
- User rtankard
- ForwardX11Trusted yes
- ForwardAgent yes
-
-Host zeus
- HostName zeus.pawsey.org.au
- User rtankard
+Host vc7-shared
+ HostName vc7-shared
+ User tankard.r
  RemoteForward 20202 localhost:22
+ LocalForward 8787 localhost:8787
  ForwardX11Trusted yes
  ForwardAgent yes
 
-Host magnus
- HostName magnus.pawsey.org.au
- User rtankard
+Host vc7
+ HostName vc7-shared
+ User tankard.r
  RemoteForward 20202 localhost:22
- ForwardX11Trusted yes
- ForwardAgent yes
-
-Host hpc-data.pawsey.org.au
- User rtankard
- ForwardX11Trusted yes
- ForwardAgent yes
-
-Host hpc-data
- HostName hpc-data.pawsey.org.au
- User rtankard
- RemoteForward 20202 localhost:22
+ LocalForward 8787 localhost:8787
  ForwardX11Trusted yes
  ForwardAgent yes
 
@@ -63,12 +37,5 @@ Host mini
  HostName trickytank.asuscomm.com
  User tank
  Port 47454
- ForwardX11Trusted yes
- ForwardAgent yes
-
-Host training_adelaide
- Hostname training-biohub.uoa.cloud
- User training007
- ForwardAgent yes
  ForwardX11Trusted yes
  ForwardAgent yes
