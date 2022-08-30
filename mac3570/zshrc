@@ -141,3 +141,5 @@ if [ -f '/Users/tankard/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/tankard
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/tankard/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/tankard/google-cloud-sdk/completion.zsh.inc'; fi
 
+# For Ruby
+export GEM_HOME=~/rubygems/gems
