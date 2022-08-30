@@ -5,8 +5,8 @@
 . ~/.bash_aliases
 
 # For a funky prompt!
-if [ -f ~/Documents/git/github/trickytank/dotfiles/mac2784/setup_files/git_PS1.sh ]; then
-. ~/Documents/git/github/trickytank/dotfiles/mac2784/setup_files/git_PS1.sh
+if [ -f ~/Documents/git/github/trickytank/dotfiles/mac3570/setup_files/git_PS1.sh ]; then
+. ~/Documents/git/github/trickytank/dotfiles/mac3570/setup_files/git_PS1.sh
 fi
 
 if [ "$STY" == "" ]; then
