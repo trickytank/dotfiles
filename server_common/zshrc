@@ -141,3 +141,15 @@ if [ -f '/Users/tankard/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/tankard
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/tankard/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/tankard/google-cloud-sdk/completion.zsh.inc'; fi
 
+# Perl 5 Library
+export PERL5LIB=~/perl5/lib
+
+PATH="/home/users/allstaff/tankard.r/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/users/allstaff/tankard.r/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/users/allstaff/tankard.r/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/users/allstaff/tankard.r/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/users/allstaff/tankard.r/perl5"; export PERL_MM_OPT;
+
+# Software bin path
+export PATH=/home/users/allstaff/tankard.r/software/bin:$PATH
+

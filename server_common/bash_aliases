@@ -14,6 +14,10 @@ alias xps='xps -c A4'
 alias xt='xterm -132 -fn 9x15 -fb 9x15b -j -rw +sf -sl 2000 -sb -title Spare -geometry 80x24+400+350 -tn xterm &'
 alias cdpk2='cd /export/share/prkfs2/shared/bioinf-data/'
 
+alias q='squeue -u tankard.r'
+
+export VAST="/vast/scratch/users/tankard.r/"
+
 # Add ssh agent
 agent () {
     eval "$(ssh-agent -s)"
