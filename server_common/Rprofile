@@ -2,7 +2,6 @@ if (interactive()) {
   suppressMessages(require(devtools))
 }
 
-
 options(
   usethis.full_name = "Rick M Tankard",
   usethis.description = list(
